@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    @apply text-slate-500 transition;
+  }
+  a:hover {
+    @apply text-slate-400;
+  }
+  a:focus {
+    @apply text-slate-300
+  }
+  strong {
+    @apply text-red-500;
+  }
+}
