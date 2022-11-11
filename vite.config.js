@@ -5,4 +5,7 @@ export default defineConfig({
   plugins: [
     topLevelAwait()
   ],
+  build: {
+    target: "es2015"
+  }
 });

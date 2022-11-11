@@ -1,14 +1,11 @@
-import initSqlJs from 'sql.js'
+import initSqlJs from 'sql.js/dist/sql-asm'
 import { version } from "../package.json"
-import sqlWasm from "sql.js/dist/sql-wasm.wasm?url"
 const upload : HTMLDivElement = document.getElementById("upload") as HTMLDivElement;
 const db : HTMLInputElement = document.getElementById("db") as HTMLInputElement;
 const verDOM : HTMLSpanElement = document.getElementById("version") as HTMLSpanElement;
 verDOM.innerHTML = `v${version}`;
 const a = document.createElement('a');
-const SQL = await initSqlJs({
-  locateFile: () => sqlWasm
-});
+const SQL = await initSqlJs();
 upload.onclick = () => {
   db.click();
 }
@@ -32,9 +29,9 @@ db.onchange = e => {
         if ((e as Error).message === "file is not a database") {
           alert("你的文件并非数据库文件。请上传正确的文件！");
         }
+        else alert(e);
       }
     }
     reader.readAsArrayBuffer(file);
   }
 }
-export {}
