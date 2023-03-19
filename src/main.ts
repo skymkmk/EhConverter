@@ -1,9 +1,6 @@
 import initSqlJs from 'sql.js/dist/sql-asm'
-import { version } from "../package.json"
 const upload : HTMLDivElement = document.getElementById("upload") as HTMLDivElement;
 const db : HTMLInputElement = document.getElementById("db") as HTMLInputElement;
-const verDOM : HTMLSpanElement = document.getElementById("version") as HTMLSpanElement;
-verDOM.innerHTML = `v${version}`;
 const a = document.createElement('a');
 const SQL = await initSqlJs();
 upload.onclick = () => {

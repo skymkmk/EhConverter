@@ -4,6 +4,10 @@
 
 可以点击 [这里](https://ehconverter.skymkmk.com) 直接使用本项目。
 
+## 重要提示
+
+现在所有 EhViewer 的主要分支都已经不检查数据库版本号。本转换器已经完成了历史任务，不再维护。
+
 ## 依赖、预览及编译
 
 你首先需要安装 [node.js](https://nodejs.org) 最新 LTS 版本并开启 corepack（可以在命令行中执行 `corepack enable` 来开启）。之后，请在命令行中切换到项目目录，执行如下命令来安装依赖：
